@@ -1,1 +1,1 @@
-CS-519 Angular E-Commerce App
+CS-519 Angular E-Commerce
