@@ -16,6 +16,14 @@ ecomApp.run(function($rootScope){
   $rootScope.addToCart = function(item) {
     $rootScope.shoppingcart.push(item);
   }
+  $rootScope.removeFromCart = function(item) {
+    var index = $rootScope.shoppingcart.indexOf(item);
+    if (index > -1) {
+      if(confirm("Sure you want to remove "+item.name+" ?")){
+        $rootScope.shoppingcart.splice(index, 1);
+      }
+    }    
+  }  
 })
 
 ecomApp.config(['$routeProvider',
