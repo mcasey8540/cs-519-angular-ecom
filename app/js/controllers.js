@@ -28,5 +28,8 @@ phonecatControllers.controller('HomeCtrl', ['$scope',
 
 phonecatControllers.controller('CategoryCtrl', ['$scope',
   function($scope) {
-    $scope.greeting = "Welcome to SmartFingerGloves"
+  }]);
+
+phonecatControllers.controller('ShoppingCartCtrl', ['$rootScope','$scope',
+  function($scope,$rootScope) {
   }]);

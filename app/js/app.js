@@ -11,6 +11,13 @@ var ecomApp = angular.module('ecomApp', [
   'phonecatServices'
 ]);
 
+ecomApp.run(function($rootScope){
+  $rootScope.shoppingcart = [];
+  $rootScope.addToCart = function(item) {
+    $rootScope.shoppingcart.push(item);
+  }
+})
+
 ecomApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
@@ -25,7 +32,11 @@ ecomApp.config(['$routeProvider',
       when('/categories', {
         templateUrl: 'partials/categories.html',
         controller: 'CategoryCtrl'
-      }).       
+      }).
+      when('/shoppingcart', {
+        templateUrl: 'partials/shoppingcart.html',
+        controller: 'ShoppingCartCtrl'
+      }).               
       when('/home', {
         templateUrl: 'partials/home.html',
         controller: 'HomeCtrl'

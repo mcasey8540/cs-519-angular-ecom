@@ -4,7 +4,9 @@ body {
   padding-top: 20px;
 }
 
-
+.search-form{
+  height: 30px; 
+}
 .phone-images {
   width: 450px;
   height: 450px;

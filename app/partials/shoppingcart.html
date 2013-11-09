@@ -1,0 +1,11 @@
+<p>You have {{shoppingcart.length}} item(s) in your cart</p>
+
+<ul class="phones">
+  <li ng-repeat="phone in phones | filter:query | orderBy:orderProp"
+      class="thumbnail phone-listing">
+    <a href="#/phones/{{phone.id}}" class="thumb"><img ng-src="{{phone.imageUrl}}"></a>
+    <a href="#/phones/{{phone.id}}">{{phone.name}}</a>
+    <!-- <p>{{phone.snippet}}</p> -->
+    <button class="btn btn-primary" data-ng-click="addToCart(phone)">Buy</button>
+  </li>
+</ul>
