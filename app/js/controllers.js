@@ -20,3 +20,13 @@ phonecatControllers.controller('PhoneDetailCtrl', ['$scope', '$routeParams', 'Ph
       $scope.mainImageUrl = imageUrl;
     }
   }]);
+
+phonecatControllers.controller('HomeCtrl', ['$scope',
+  function($scope) {
+    $scope.greeting = "Welcome to SmartFingerGloves"
+  }]);
+
+phonecatControllers.controller('CategoryCtrl', ['$scope',
+  function($scope) {
+    $scope.greeting = "Welcome to SmartFingerGloves"
+  }]);

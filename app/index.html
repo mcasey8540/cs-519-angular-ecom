@@ -1,10 +1,11 @@
 <!doctype html>
-<html lang="en" ng-app="phonecatApp">
+<html lang="en" ng-app="ecomApp">
 <head>
   <meta charset="utf-8">
   <title>Smart Finger Gloves</title>
   <link rel="stylesheet" href="css/app.css">
   <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/animations.css">
 
   <script src="lib/jquery/jquery-1.10.2.js"></script>
@@ -14,6 +15,7 @@
   <script src="lib/angular/angular-route.js"></script>
 
   <script src="js/app.js"></script>
+  <script src="js/bootstrap.min.js"></script>
   <script src="js/animations.js"></script>
   <script src="js/controllers.js"></script>
   <script src="js/filters.js"></script>
@@ -29,7 +31,16 @@
     ga('create', 'UA-45572225-1', 'smartfingergloves.com');
     ga('send', 'pageview');
 
-  </script>  
+  </script>
+
+  <ul class="nav nav-pills">
+    <li class="active"><a href="#/home">SmartFinger Gloves</a></li>
+    <li><a href="#/categories">Categories</a></li>
+    <li><a href="#/phones">Phones</a></li>
+    <li><a href="#/shoppingcart">Shopping Cart <i class="icon icon-shopping-cart"></i> {{shoppingcart.size}} </a></li>
+  </ul>
+  <br>
+
   <div class="view-container">
     <div ng-view class="view-frame"></div>
   </div>
