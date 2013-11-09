@@ -2,7 +2,7 @@
 
 /* App Module */
 
-var phonecatApp = angular.module('phonecatApp', [
+var ecomApp = angular.module('ecomApp', [
   'ngRoute',
   'phonecatAnimations',
 
@@ -11,7 +11,7 @@ var phonecatApp = angular.module('phonecatApp', [
   'phonecatServices'
 ]);
 
-phonecatApp.config(['$routeProvider',
+ecomApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
       when('/phones', {
@@ -22,7 +22,15 @@ phonecatApp.config(['$routeProvider',
         templateUrl: 'partials/phone-detail.html',
         controller: 'PhoneDetailCtrl'
       }).
+      when('/categories', {
+        templateUrl: 'partials/categories.html',
+        controller: 'CategoryCtrl'
+      }).       
+      when('/home', {
+        templateUrl: 'partials/home.html',
+        controller: 'HomeCtrl'
+      }).      
       otherwise({
-        redirectTo: '/phones'
+        redirectTo: '/home'    
       });
   }]);
