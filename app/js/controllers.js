@@ -32,4 +32,7 @@ phonecatControllers.controller('CategoryCtrl', ['$scope',
 
 phonecatControllers.controller('ShoppingCartCtrl', ['$rootScope','$scope',
   function($scope,$rootScope) {
+    angular.forEach($rootScope.shoppingcart, function(value, key){
+      $rootScope.cartTotal += value.price;
+    });
   }]);

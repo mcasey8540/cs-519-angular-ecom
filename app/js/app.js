@@ -15,6 +15,7 @@ ecomApp.run(function($rootScope){
   $rootScope.shoppingcart = [];
   $rootScope.addToCart = function(item) {
     $rootScope.shoppingcart.push(item);
+    $rootScope.calculateTotal();
   }
   $rootScope.removeFromCart = function(item) {
     var index = $rootScope.shoppingcart.indexOf(item);
@@ -22,8 +23,15 @@ ecomApp.run(function($rootScope){
       if(confirm("Sure you want to remove "+item.name+" ?")){
         $rootScope.shoppingcart.splice(index, 1);
       }
-    }    
+    }
+    $rootScope.calculateTotal();   
   }  
+  $rootScope.calculateTotal = function(){
+    $rootScope.shoppingcart.total = 0;
+    angular.forEach($rootScope.shoppingcart, function(value, key){
+      $rootScope.shoppingcart.total += value.price;
+    });   
+  }
 })
 
 ecomApp.config(['$routeProvider',
