@@ -4,11 +4,10 @@
 
 var ecomApp = angular.module('ecomApp', [
   'ngRoute',
-  'phonecatAnimations',
-
-  'phonecatControllers',
-  'phonecatFilters',
-  'phonecatServices'
+  'ecomAnimations',
+  'ecomControllers',
+  'ecomFilters',
+  'ecomServices'
 ]);
 
 ecomApp.run(function($rootScope){
@@ -38,14 +37,6 @@ ecomApp.run(function($rootScope){
 ecomApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
-      when('/phones', {
-        templateUrl: 'partials/phone-list.html',
-        controller: 'PhoneListCtrl'
-      }).
-      when('/phones/:phoneId', {
-        templateUrl: 'partials/phone-detail.html',
-        controller: 'PhoneDetailCtrl'
-      }).
       when('/gloves', {
         templateUrl: 'partials/glove-list.html',
         controller: 'GloveListCtrl'
@@ -58,6 +49,10 @@ ecomApp.config(['$routeProvider',
         templateUrl: 'partials/categories.html',
         controller: 'CategoryCtrl'
       }).
+      when('/categories/:type', {
+        templateUrl: 'partials/glove-list.html',
+        controller: 'CategoryCtrl'
+      }).      
       when('/shoppingcart', {
         templateUrl: 'partials/shoppingcart.html',
         controller: 'ShoppingCartCtrl'

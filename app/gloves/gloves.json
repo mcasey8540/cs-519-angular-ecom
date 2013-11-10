@@ -1,6 +1,7 @@
 [
     {
         "age": 2, 
+        "type":"charcoal",
         "id": "sfg-1", 
         "imageUrl": "img/gloves/sfg-1.jpg", 
         "name": "SmartFingerGloves\u2122 Charcoal with Merino Wool",
@@ -9,10 +10,20 @@
     }, 
     {
         "age": 0, 
-        "id": "sfg-2", 
+        "id": "sfg-2",
+        "type":"charcoal", 
         "imageUrl": "img/gloves/sfg-1.jpg", 
         "name": "SmartFingerGloves\u2122 Charcoal with SMART Merino Wool", 
         "price": 29.00,         
         "snippet": "The world's finest Merino Wool touchscreen gloves."
-    }
+    },
+    {
+        "age": 1, 
+        "id": "sfg-3", 
+        "type":"bamboo",
+        "imageUrl": "img/gloves/sfg-white.jpg", 
+        "name": "SmartFingerGloves\u2122 Bamboo with SMART Merino Wool", 
+        "price": 39.00,         
+        "snippet": "The world's finest Merino Wool touchscreen gloves."
+    }    
 ]
