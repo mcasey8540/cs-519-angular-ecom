@@ -1,12 +1,12 @@
 {
     "description": "Description Here", 
-    "id": "sfg-2", 
+    "id": "sfg-3", 
     "images": [
-        "img/gloves/sfg-1.jpg",
-        "gloves/sfg-2.jpg"
+        "img/gloves/sfg-white.jpg",
+        "gloves/sfg-white.jpg"
     ],
-    "imageUrl": "img/gloves/sfg-1.jpg", 
-    "name": "SmartFingerGloves\u2122 Charcoal with SMART Merino Wool", 
+    "imageUrl": "img/gloves/sfg-white.jpg", 
+    "name": "SmartFingerGloves\u2122 Bamboo with SMART Merino Wool", 
     "sizeAndWeight": {
         "dimensions": [
             "63.5 mm (w)", 
@@ -15,7 +15,7 @@
         ], 
         "weight": "135.0 grams"
     },
-    "price": 29.00,
+    "price": 39.00,
     "materials": [
         "77% New Zeland Merino Wool",
         "15% Silver",

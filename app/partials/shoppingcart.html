@@ -12,7 +12,7 @@
   </thead>
   <tbody class="phones" ng-repeat="item in shoppingcart track by $index">
   	<tr>
-	  	<td><a href="#/phones/{{item.id}}" class="thumb-cart"><img ng-src="{{item.imageUrl}}"></a><a href="#/phones/{{item.id}}">{{item.name}}</a></td>   
+	  	<td><a href="#/gloves/{{item.id}}" class="thumb-cart"><img ng-src="{{item.imageUrl}}"></a><a href="#/gloves/{{item.id}}">{{item.name}}</a></td>   
 	  	<td>${{item.price}}</td>
 	  	<td><button class="btn btn-danger" data-ng-click="removeFromCart(item)">Remove</button></td>
 	  </tr>	

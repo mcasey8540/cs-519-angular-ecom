@@ -1,6 +1,7 @@
 {
     "description": "Description Here", 
-    "id": "sfg-1", 
+    "id": "sfg-1",
+    "imageUrl": "img/gloves/sfg-1.jpg", 
     "images": [
         "img/gloves/sfg-1.jpg",
         "gloves/sfg-1.jpg"
