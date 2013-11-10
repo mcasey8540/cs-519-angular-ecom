@@ -46,6 +46,14 @@ ecomApp.config(['$routeProvider',
         templateUrl: 'partials/phone-detail.html',
         controller: 'PhoneDetailCtrl'
       }).
+      when('/gloves', {
+        templateUrl: 'partials/glove-list.html',
+        controller: 'GloveListCtrl'
+      }).
+      when('/gloves/:gloveId', {
+        templateUrl: 'partials/glove-detail.html',
+        controller: 'GloveDetailCtrl'
+      }).            
       when('/categories', {
         templateUrl: 'partials/categories.html',
         controller: 'CategoryCtrl'

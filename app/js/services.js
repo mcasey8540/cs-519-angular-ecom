@@ -10,3 +10,10 @@ phonecatServices.factory('Phone', ['$resource',
       query: {method:'GET', params:{phoneId:'phones'}, isArray:true}
     });
   }]);
+
+phonecatServices.factory('Glove', ['$resource',
+  function($resource){
+    return $resource('gloves/:gloveId.json', {}, {
+      query: {method:'GET', params:{gloveId:'gloves'}, isArray:true}
+    });
+  }]);

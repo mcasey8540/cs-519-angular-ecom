@@ -21,6 +21,23 @@ phonecatControllers.controller('PhoneDetailCtrl', ['$scope', '$routeParams', 'Ph
     }
   }]);
 
+phonecatControllers.controller('GloveListCtrl', ['$scope', 'Glove',
+  function($scope, Glove) {
+    $scope.gloves = Glove.query();
+    $scope.orderProp = 'price';
+  }]);
+
+phonecatControllers.controller('GloveDetailCtrl', ['$scope', '$routeParams', 'Glove',
+  function($scope, $routeParams, Glove) {
+    $scope.glove = Glove.get({gloveId: $routeParams.gloveId}, function(glove) {
+      $scope.mainImageUrl = glove.images[0];
+    });
+
+    $scope.setImage = function(imageUrl) {
+      $scope.mainImageUrl = imageUrl;
+    }
+  }]);
+
 phonecatControllers.controller('HomeCtrl', ['$scope',
   function($scope) {
     $scope.greeting = "Welcome to SmartFingerGloves"

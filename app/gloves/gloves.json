@@ -1,0 +1,18 @@
+[
+    {
+        "age": 2, 
+        "id": "sfg-1", 
+        "imageUrl": "img/gloves/sfg-1.jpg", 
+        "name": "SmartFingerGloves\u2122 Charcoal with Merino Wool",
+        "price": 25.00, 
+        "snippet": "The world's finest Merino Wool touchscreen gloves."
+    }, 
+    {
+        "age": 0, 
+        "id": "sfg-2", 
+        "imageUrl": "img/gloves/sfg-1.jpg", 
+        "name": "SmartFingerGloves\u2122 Charcoal with SMART Merino Wool", 
+        "price": 29.00,         
+        "snippet": "The world's finest Merino Wool touchscreen gloves."
+    }
+]

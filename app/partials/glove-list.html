@@ -1,0 +1,35 @@
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span2">
+      <!--Sidebar content-->
+
+      Search: <input ng-model="query" class="search-form">
+      Sort by:
+      <select ng-model="orderProp">
+        <option value="price">Price</option>
+        <option value="name">Alphabetical</option>
+        <option value="age">Newest</option>
+      </select>
+    </div>  
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>        
+    <div class="span10">
+      <!--Body content-->
+
+      <ul class="phones">
+        <li ng-repeat="glove in gloves | filter:query | orderBy:orderProp"
+            class="thumbnail phone-listing">
+          <a href="#/gloves/{{glove.id}}" class="thumb"><img ng-src="{{glove.imageUrl}}"></a>
+          <a href="#/gloves/{{glove.id}}">{{glove.name}}</a></br>${{glove.price}}</br>
+          <!-- <p>{{phone.snippet}}</p> -->
+          <button class="btn btn-primary" data-ng-click="addToCart(glove)">Buy</button>
+        </li>
+      </ul>      
+
+    </div>
+  </div>
+</div>
