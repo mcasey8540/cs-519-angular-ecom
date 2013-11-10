@@ -4,6 +4,12 @@ body {
   padding-top: 20px;
 }
 
+.bg-image{
+  background-image:url('../img/background/Images/1.jpg');
+  height: 640px;
+  background-repeat:no-repeat;
+}
+
 .search-form{
   height: 30px; 
 }

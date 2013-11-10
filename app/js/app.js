@@ -13,6 +13,7 @@ var ecomApp = angular.module('ecomApp', [
 
 ecomApp.run(function($rootScope){
   $rootScope.shoppingcart = [];
+  $rootScope.shoppingcart.total = 0;
   $rootScope.addToCart = function(item) {
     $rootScope.shoppingcart.push(item);
     $rootScope.calculateTotal();
