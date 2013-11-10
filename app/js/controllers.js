@@ -24,6 +24,7 @@ phonecatControllers.controller('PhoneDetailCtrl', ['$scope', '$routeParams', 'Ph
 phonecatControllers.controller('HomeCtrl', ['$scope',
   function($scope) {
     $scope.greeting = "Welcome to SmartFingerGloves"
+    $('#myCarousel').carousel({pause: "hover"});
   }]);
 
 phonecatControllers.controller('CategoryCtrl', ['$scope',
