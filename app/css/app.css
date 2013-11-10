@@ -8,6 +8,7 @@ body {
   background-image:url('../img/background/Images/1.jpg');
   height: 640px;
   background-repeat:no-repeat;
+  opacity:0.6;
 }
 
 .search-form{
