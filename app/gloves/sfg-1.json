@@ -1,0 +1,23 @@
+{
+    "description": "Description Here", 
+    "id": "sfg-1", 
+    "images": [
+        "img/gloves/sfg-1.jpg",
+        "gloves/sfg-1.jpg"
+    ], 
+    "name": "SmartFingerGloves\u2122 Charcoal with Merino Wool", 
+    "sizeAndWeight": {
+        "dimensions": [
+            "63.5 mm (w)", 
+            "117.75 mm (h)", 
+            "10.95 mm (d)"
+        ], 
+        "weight": "135.0 grams"
+    },
+    "price": 25.00,
+    "materials": [
+        "80% New Zeland Merino Wool",
+        "15% Silver",
+        "5% Spandex"
+    ]
+}

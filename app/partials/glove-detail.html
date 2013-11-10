@@ -1,0 +1,35 @@
+<div class="phone-images">
+  <img ng-src="{{img}}"
+       class="phone"
+       ng-repeat="img in glove.images"
+       ng-class="{active: mainImageUrl==img}">
+</div>
+
+<h1>{{glove.name}}</h1>
+
+<p>{{glove.description}}</p>
+
+<ul class="phone-thumbs">
+  <li ng-repeat="img in glove.images">
+    <img ng-src="{{img}}" ng-mouseenter="setImage(img)">
+  </li>
+</ul>
+
+<ul class="specs">
+  <li>
+    <span>Fine Materials</span>
+    <dl>
+      <dt>Materials</dt>
+      <dd ng-repeat="material in glove.materials">{{material}}</dd>
+    </dl>
+  </li>
+  <li>
+    <span>Size and Weight</span>
+    <dl>
+      <dt>Dimensions</dt>
+      <dd ng-repeat="dim in glove.sizeAndWeight.dimensions">{{dim}}</dd>
+      <dt>Weight</dt>
+      <dd>{{glove.sizeAndWeight.weight}}</dd>
+    </dl>
+  </li>
+</ul>
