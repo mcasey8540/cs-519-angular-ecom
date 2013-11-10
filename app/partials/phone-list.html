@@ -3,13 +3,19 @@
     <div class="span2">
       <!--Sidebar content-->
 
-      Search: <input ng-model="query">
+      Search: <input ng-model="query" class="search-form">
       Sort by:
       <select ng-model="orderProp">
         <option value="name">Alphabetical</option>
         <option value="age">Newest</option>
       </select>
     </div>  
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>        
     <div class="span10">
       <!--Body content-->
 
@@ -18,7 +24,8 @@
             class="thumbnail phone-listing">
           <a href="#/phones/{{phone.id}}" class="thumb"><img ng-src="{{phone.imageUrl}}"></a>
           <a href="#/phones/{{phone.id}}">{{phone.name}}</a>
-          <p>{{phone.snippet}}</p>
+          <!-- <p>{{phone.snippet}}</p> -->
+          <button class="btn btn-primary" data-ng-click="addToCart(phone)">Buy</button>
         </li>
       </ul>
 

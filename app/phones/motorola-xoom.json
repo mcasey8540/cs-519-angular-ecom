@@ -40,7 +40,8 @@
         "physicalKeyboard": false, 
         "usb": "USB 2.0"
     }, 
-    "id": "motorola-xoom", 
+    "id": "motorola-xoom",
+    "price": "200.00", 
     "images": [
         "img/phones/motorola-xoom.0.jpg", 
         "img/phones/motorola-xoom.1.jpg", 
