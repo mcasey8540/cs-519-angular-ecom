@@ -30,8 +30,8 @@ ecomControllers.controller('HomeCtrl', ['$scope',
 ecomControllers.controller('CategoryCtrl', ['$scope', '$routeParams', 'Glove',
   function($scope, $routeParams, Glove) {
     $scope.gloves = Glove.query();
-    $scope.query = 'bamboo';
     $scope.orderProp = 'price';
+    $scope.query = $routeParams.type;
 }]);
 
 ecomControllers.controller('ShoppingCartCtrl', ['$rootScope','$scope',
