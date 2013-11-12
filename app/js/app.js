@@ -32,6 +32,8 @@ ecomApp.run(function($rootScope){
       $rootScope.shoppingcart.total += value.price;
     });   
   }
+  $rootScope.siteVersion = (Math.random() < .5) ? "a" : "b";
+  console.log($rootScope.siteVersion);
 })
 
 ecomApp.config(['$routeProvider',
@@ -49,6 +51,10 @@ ecomApp.config(['$routeProvider',
         templateUrl: 'partials/categories.html',
         controller: 'CategoryCtrl'
       }).
+      when('/categoriesb', {
+        templateUrl: 'partials/categoriesb.html',
+        controller: 'CategoryCtrl'
+      }).      
       when('/categories/:type', {
         templateUrl: 'partials/glove-list.html',
         controller: 'CategoryCtrl'
@@ -56,12 +62,16 @@ ecomApp.config(['$routeProvider',
       when('/shoppingcart', {
         templateUrl: 'partials/shoppingcart.html',
         controller: 'ShoppingCartCtrl'
-      }).               
+      }).
+      when('/shoppingcartb', {
+        templateUrl: 'partials/shoppingcartb.html',
+        controller: 'ShoppingCartCtrl'
+      }).                     
       when('/home', {
         templateUrl: 'partials/home.html',
         controller: 'HomeCtrl'
       }).      
       otherwise({
-        redirectTo: '/home'    
+        redirectTo: '/categories'    
       });
   }]);
