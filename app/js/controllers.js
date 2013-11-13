@@ -25,17 +25,6 @@ ecomControllers.controller('HomeCtrl', ['$scope','$http',
   function($scope, $http) {
     $scope.greeting = "Welcome to SmartFingerGloves"
     $('#myCarousel').carousel({pause: "hover"});
-    //http testing
-    $scope.data = "unknown";
-    //$http.jsonp('http://api.simpleupc.com&callback=JSON_CALLBACK', {params: {'upc':'049000042566', 'method':'FetchProductByUPC', 'auth':'h5OcDMew9G82bTt1TFBZTfDO930AeHlq'}}).success(function(data){
-    $http.jsonp('http://api.simpleupc.com/v1.php?upc=049000042566&method=FetchProductByUPC&auth=h5OcDMew9G82bTt1TFBZTfDO930AeHlq&Content-Type=text/json&callback=JSON_CALLBACK').success(function(data){  
-    //$http.get('http://api.simpleupc.com?upc=049000042566&method=FetchProductByUPC&auth=h5OcDMew9G82bTt1TFBZTfDO930AeHlq&Content-Type=text/json').success(function(data){  
-      $scope.data = data;
-      alert("success " + $scope.data);
-    }).error(function(data){
-      alert("error " + data);
-    });
-
   }]);
 
 ecomControllers.controller('CategoryCtrl', ['$scope', '$routeParams', 'Glove',
