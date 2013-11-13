@@ -36,8 +36,9 @@ ecomApp.run(function($rootScope){
   console.log($rootScope.siteVersion);
 })
 
-ecomApp.config(['$routeProvider',
-  function($routeProvider) {
+ecomApp.config(['$routeProvider', '$httpProvider',
+  function($routeProvider, $httpProvider) {
+    delete $httpProvider.defaults.headers.common['X-Requested-With'];
     $routeProvider.
       when('/gloves', {
         templateUrl: 'partials/glove-list.html',

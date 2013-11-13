@@ -21,26 +21,29 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 '" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
 </script><script>utmx('url','A/B');</script>
 <!-- End of Google Analytics Content Experiment code -->
+<body>
 
-<h4>Total ${{shoppingcart.total}}</h4>
-<p>You have {{shoppingcart.length}} item(s) in your cart</p>
+  <div class="row" style="margin:10px;">
+    <h4>Total ${{shoppingcart.total}}</h4>
+    <span>You have {{shoppingcart.length}} item(s) in your cart</span>
+    <button class="btn btn-warning pull-right"><i class="glyphicon glyphicon-credit-card"></i> Checkout</button>
+  </div>
 
-
-<table class="table table-striped">
-  <thead>
-  	<tr>
-	  	<th>Item</th>   
-	  	<th>Price</th>
-	  	<th></th>
-	  </tr>	
-  </thead>
-  <tbody class="phones" ng-repeat="item in shoppingcart track by $index">
-  	<tr>
-	  	<td><a href="#/gloves/{{item.id}}" class="thumb-cart"><img ng-src="{{item.imageUrl}}"></a><a href="#/gloves/{{item.id}}">{{item.name}}</a></td>   
-	  	<td>${{item.price}}</td>
-	  	<td><button class="btn btn-danger" data-ng-click="removeFromCart(item)">Remove</button></td>
-	  </tr>	
-  </tbody> 
-</table>
-
+  <table class="table table-striped">
+    <thead>
+    	<tr>
+  	  	<th>Item</th>   
+  	  	<th>Price</th>
+  	  	<th></th>
+  	  </tr>	
+    </thead>
+    <tbody class="phones" ng-repeat="item in shoppingcart track by $index">
+    	<tr>
+  	  	<td><a href="#/gloves/{{item.id}}" class="thumb-cart"><img ng-src="{{item.imageUrl}}"></a><a href="#/gloves/{{item.id}}">{{item.name}}</a></td>   
+  	  	<td>${{item.price}}</td>
+  	  	<td><button class="btn btn-danger" data-ng-click="removeFromCart(item)">Remove</button></td>
+  	  </tr>	
+    </tbody> 
+  </table>
+</body>
 
