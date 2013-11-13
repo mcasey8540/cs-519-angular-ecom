@@ -25,7 +25,8 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 
   <div class="row" style="margin:10px;">
     <h4>Total ${{shoppingcart.total}}</h4>
-    <span>You have {{shoppingcart.length}} item(s) in your cart</span>
+    <span ng-show="shoppingcart.length > 0">You have {{shoppingcart.length}} item(s) in your cart</span>
+    <span ng-show="shoppingcart.length === 0">You're cart is empty. Time to go buy some <a href="#/gloves">gloves</a>!</span>
     <button class="btn btn-warning pull-right"><i class="glyphicon glyphicon-credit-card"></i> Checkout</button>
   </div>
 
