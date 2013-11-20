@@ -107,3 +107,33 @@ ul.specs dt {
 h1 {
   border-bottom: 1px solid gray;
 }
+
+.icon_signup_creditcard_amex {
+    width: 50px;
+    height: 36px;
+    background: image-url("img/signup.png") -210px -92px no-repeat;
+}
+.icon_signup_creditcard_dinersclub {
+    width: 50px;
+    height: 36px;
+    background: image-url("img/signup.png") -260px -92px no-repeat;
+}
+.icon_signup_creditcard_discover {
+    width: 50px;
+    height: 36px;
+    background: image-url("img/signup.png") -310px -92px no-repeat;
+}
+.icon_signup_creditcard_mastercard {
+    width: 50px;
+    height: 36px;
+    background: image-url("img/signup.png") -360px -92px no-repeat;
+}
+.icon_signup_creditcard_visa {
+    width: 50px;
+    height: 36px;
+    background: image-url("img/signup.png") -410px -92px no-repeat;
+}
+
+.payment-form{
+  width: 250px;
+}

@@ -41,8 +41,45 @@ ecomControllers.controller('ShoppingCartCtrl', ['$rootScope','$scope',
     });
   }]);
 
-ecomControllers.controller('CheckoutCtrl', ['$rootScope','$scope',
-  function($scope,$rootScope) {
-    
-  }]);
+function CheckoutCtrl($rootScope,$scope){
 
+    $scope.creditCardNumber = '';
+    //credit card opacities 
+    $scope.creditCardOpacities={}
+    $scope.creditCardOpacities['amexCardOpacity'] = 0.5;
+    $scope.creditCardOpacities['mastercardCardOpacity'] = 0.5;
+    $scope.creditCardOpacities['visaCardOpacity'] = 0.5;
+    $scope.creditCardOpacities['discoverCardOpacity'] = 0.5;
+
+    $scope.$watch('creditCardNumber', function() {
+      switch($scope.creditCardNumber.substr(0,1))
+      {
+      case "3":
+        $scope.creditCardOpacities['amexCardOpacity'] = 1;
+        resetOpacities('amexCardOpacity');
+        break;
+      case "4":
+        $scope.creditCardOpacities['visaCardOpacity'] = 1;
+        resetOpacities('visaCardOpacity');
+        break;
+      case "5":
+        $scope.creditCardOpacities['mastercardCardOpacity'] = 1;
+        resetOpacities('mastercardCardOpacity');
+        break;
+      case "6":
+        $scope.creditCardOpacities['discoverCardOpacity'] = 1;
+        resetOpacities('discoverCardOpacity');
+        break;               
+      default:
+        resetOpacities();;
+      }
+    });
+
+    var resetOpacities = function(choice){
+      angular.forEach($scope.creditCardOpacities, function(value, key) {
+        if (key != choice){
+          $scope.creditCardOpacities[key] = 0.5;
+        }
+      });
+    }    
+  }
