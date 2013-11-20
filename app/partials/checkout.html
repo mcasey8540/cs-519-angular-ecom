@@ -1,0 +1,31 @@
+<span ng-show="shoppingcart.length === 0">You're cart is empty. Time to go buy some <a href="#/gloves">gloves</a>!</span>
+<div ng-show="shoppingcart.length > 0"> 
+	<h4>Review Order Details<h4>
+	</br>
+	<span>You have <b><a href="#/shoppingcart">{{shoppingcart.length}} item(s)</a></b> in your <a href="#/shoppingcart">shopping cart</a></span>
+
+	<table class="table table-striped" style="width: 400px;">
+	  <thead>
+	  	<tr>
+		  	<th>Item</th>   
+		  	<th>Price</th>
+		  </tr>	
+	  </thead>
+	  <tbody>
+	  	<tr class="phones" ng-repeat="item in shoppingcart track by $index">
+		  	<td><a href="#/gloves/{{item.id}}" class="thumb-cart"><img ng-src="{{item.imageUrl}}"></a><a href="#/gloves/{{item.id}}">{{item.name}}</a></td>   
+		  	<td>${{item.price}}</td>
+		  	<td>
+		  </tr>
+		  <tr>
+		  	<td><b>Total</b></td>
+		  	<td><b>${{shoppingcart.total}}</b></td>
+		  <tr>	
+	  </tbody> 
+	</table>
+	</br>
+		<h4>How would you like to pay?<h4>
+	</br>
+</div>
+
+

@@ -64,10 +64,15 @@ ecomApp.config(['$routeProvider', '$httpProvider',
         templateUrl: 'partials/shoppingcart.html',
         controller: 'ShoppingCartCtrl'
       }).
+      //change before submission partials/shoppingcart.html
       when('/shoppingcartb', {
-        templateUrl: 'partials/shoppingcartb.html',
+        templateUrl: 'partials/shoppingcart.html',
         controller: 'ShoppingCartCtrl'
-      }).                     
+      }).
+      when('/checkout', {
+        templateUrl: 'partials/checkout.html',
+        controller: 'CheckoutCtrl'
+      }).                           
       when('/home', {
         templateUrl: 'partials/home.html',
         controller: 'HomeCtrl'

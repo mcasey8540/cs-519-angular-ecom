@@ -40,3 +40,9 @@ ecomControllers.controller('ShoppingCartCtrl', ['$rootScope','$scope',
       $rootScope.cartTotal += value.price;
     });
   }]);
+
+ecomControllers.controller('CheckoutCtrl', ['$rootScope','$scope',
+  function($scope,$rootScope) {
+    
+  }]);
+
