@@ -137,3 +137,13 @@ h1 {
 .payment-form{
   width: 250px;
 }
+
+.order-confirmation{
+  width: 150px;
+  float: left;
+  margin-right: 40px;
+}
+
+.order-details{
+  float: left;
+}

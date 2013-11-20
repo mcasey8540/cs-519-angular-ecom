@@ -41,6 +41,10 @@ ecomControllers.controller('ShoppingCartCtrl', ['$rootScope','$scope',
     });
   }]);
 
+function OrderConfirmationCtrl($rootScope,$scope){
+  $scope.order_confirmation_number = new Date().setDate(30);
+}
+
 function CheckoutCtrl($rootScope,$scope){
 
     $scope.creditCardNumber = '';
