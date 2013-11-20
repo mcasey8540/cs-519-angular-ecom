@@ -42,7 +42,7 @@ ecomControllers.controller('ShoppingCartCtrl', ['$rootScope','$scope',
   }]);
 
 function OrderConfirmationCtrl($rootScope,$scope){
-  $scope.order_confirmation_number = new Date().setDate(30);
+  $scope.order_confirmation_number = new Date().setDate(new Date().getDate() + 5);
 }
 
 function CheckoutCtrl($rootScope,$scope){

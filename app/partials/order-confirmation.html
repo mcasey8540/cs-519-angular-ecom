@@ -4,6 +4,7 @@
 	<img class="order-confirmation" src="img/creditcards/icon_signup_confirmation_envelope.png" />
 	<span class="order-details">
 		<b>Order Number: </b><p data-ng-bind="order_confirmation_number"></p>
-		<b>Delivery Estimate: </b><p data-ng-bind="order_confirmation_number | date:'MM/dd/yyyy'"></p>		
+		<b>Delivery Estimate: </b><p data-ng-bind="order_confirmation_number | date:'MM/dd/yyyy'"></p>
+		<b>Order Total:</b></br>$<span data-ng-bind="shoppingcart.total"></span>		
 	</span>
 </div>
