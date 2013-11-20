@@ -76,7 +76,11 @@ ecomApp.config(['$routeProvider', '$httpProvider',
       when('/home', {
         templateUrl: 'partials/home.html',
         controller: 'HomeCtrl'
-      }).      
+      }).
+      when('/orderconfirmation', {
+        templateUrl: 'partials/order-confirmation.html',
+        controller: 'OrderConfirmationCtrl'
+      }).             
       otherwise({
         redirectTo: '/categories'    
       });

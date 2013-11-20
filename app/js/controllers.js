@@ -81,5 +81,12 @@ function CheckoutCtrl($rootScope,$scope){
           $scope.creditCardOpacities[key] = 0.5;
         }
       });
-    }    
+    }
+
+    $scope.submitOrder = function() {
+      if(confirm("Your card will be charged $"+ $rootScope.shoppingcart.total)){
+        window.location.assign("#/orderconfirmation")
+      }
+    }
+
   }
