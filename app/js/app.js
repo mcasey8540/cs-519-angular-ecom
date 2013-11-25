@@ -11,12 +11,15 @@ var ecomApp = angular.module('ecomApp', [
 ]);
 
 ecomApp.run(function($rootScope){
+
   $rootScope.shoppingcart = [];
   $rootScope.shoppingcart.total = 0;
+  
   $rootScope.addToCart = function(item) {
     $rootScope.shoppingcart.push(item);
     $rootScope.calculateTotal();
   }
+
   $rootScope.removeFromCart = function(item) {
     var index = $rootScope.shoppingcart.indexOf(item);
     if (index > -1) {
@@ -26,6 +29,7 @@ ecomApp.run(function($rootScope){
     }
     $rootScope.calculateTotal();   
   }  
+
   $rootScope.calculateTotal = function(){
     $rootScope.shoppingcart.total = 0;
     angular.forEach($rootScope.shoppingcart, function(value, key){
